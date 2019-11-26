@@ -47,17 +47,22 @@ trainerForm.addEventListener('submit', (e) => {
 
   document.getElementById('trainer-name').innerHTML = `Trainer ${name}'s Team`
 })
-
+counterTrainerImage=1
 for (let i = 1 ; i < 9; i++) {
   document.getElementById(`trainer${i}`).addEventListener('click', () => {
-    trainerIcon.style.display = 'none'
+
     trainerImg = document.getElementById(`trainer${i}`).src
     trainer0.setIcon(trainerImg)
     document.getElementById('trainer-pic').src = trainerImg
-    displayTeam.style.display = 'block'
-    startBtn.style.display = 'none'
-  })
+    console.log(counterTrainerImage);
+    if(counterTrainerImage ==  4){
+      trainerIcon.style.display = 'none'
+      displayTeam.style.display = 'block'
+      startBtn.style.display = 'none'
 
+    }
+    counterTrainerImage++
+  })
 }
 let count = 0
 pokemonForm.addEventListener('submit', async (e) => {
