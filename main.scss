@@ -16,6 +16,7 @@ body {
   position: absolute;
   right: 56%;
   animation: slide1 1.5s forwards;
+  z-index: 0;
 }
 #red-layer {
   height: 100%;
@@ -25,6 +26,7 @@ body {
   position: absolute;
   left: 56%;
   animation: slide2 1.5s forwards;
+  z-index: 0;
 }
 
 #btn-layer {
@@ -39,6 +41,11 @@ body {
   opacity: 0;
   animation: appear 1s forwards;
   animation-delay: 2s;
+  z-index: 1
+}
+
+#trainer-icons {
+  display: none;
 }
 
 }
