@@ -1,0 +1,44 @@
+body {
+  background: black;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Alata';
+}
+
+#pokeball-background {
+
+
+#white-layer {
+  height: 100%;
+  width: 80%;
+  background-color: white;
+  z-index: 0;
+  position: absolute;
+  right: 56%;
+  animation: slide1 1.5s forwards;
+}
+#red-layer {
+  height: 100%;
+  width: 80%;
+  background-color: red;
+  z-index: 0;
+  position: absolute;
+  left: 56%;
+  animation: slide2 1.5s forwards;
+}
+
+#btn-layer {
+
+}
+
+}
+// ----------Animations----------
+@keyframes slide1 {
+  from {right:100%; opacity: 0; }
+  to {right: 56%; opacity: 1; }
+}
+
+@keyframes slide2 {
+  from {left:100%}
+  to {left: 56%}
+}
