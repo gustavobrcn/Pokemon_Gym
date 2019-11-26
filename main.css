@@ -42,7 +42,11 @@ body {
   animation-delay: 2s;
   z-index: 1;
 }
-#pokeball-background #trainer-icons {
+
+#trainer-icons {
+  display: none;
+}
+#trainer-icons .icons {
   display: none;
 }
 

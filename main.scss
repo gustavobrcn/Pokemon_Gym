@@ -42,12 +42,19 @@ body {
   animation: appear 1s forwards;
   animation-delay: 2s;
   z-index: 1
+  }
+}
+
+#welcome {
+  
 }
 
 #trainer-icons {
   display: none;
-}
 
+  .icons {
+    display: none;
+  }
 }
 // ----------Animations----------
 @keyframes slide1 {
