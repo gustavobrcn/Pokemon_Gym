@@ -84,7 +84,7 @@ pokemonForm.addEventListener('submit', async (e) => {
   const pokemonName =  document.getElementById('pokemon-input').value
   const pokemon = new Pokemon(pokemonName)
   await pokemon.init()
-  trainer.addPokemon(pokemon)
+  trainer0.addPokemon(pokemon)
   const image = document.createElement('img')
   image.src = pokemon.image
   image.dataset.index = count++
