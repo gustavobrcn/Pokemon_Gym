@@ -35,7 +35,10 @@ body {
   width: 200px;
   position: absolute;
   top:33%;
-  right:41%;
+  right:41.5%;
+  opacity: 0;
+  animation: appear 1s forwards;
+  animation-delay: 2s;
 }
 
 }
@@ -50,12 +53,7 @@ body {
   to {left: 56%}
 }
 
-@keyframes grow {
-  from {
-    top: 45;
-    right: 46.5%;
-    height: 50px;
-    width: 50px;
-    
-  }
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

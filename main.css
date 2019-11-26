@@ -34,7 +34,10 @@ body {
   width: 200px;
   position: absolute;
   top: 33%;
-  right: 41%;
+  right: 41.5%;
+  opacity: 0;
+  animation: appear 1s forwards;
+  animation-delay: 2s;
 }
 
 @keyframes slide1 {
@@ -55,6 +58,13 @@ body {
     left: 56%;
   }
 }
-@keyframes grow {}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
