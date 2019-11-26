@@ -52,8 +52,22 @@ for (let i = 1 ; i < 9; i++) {
   document.getElementById(`trainer${i}`).addEventListener('click', () => {
 
     trainerImg = document.getElementById(`trainer${i}`).src
-    trainer0.setIcon(trainerImg)
-    document.getElementById('trainer-pic').src = trainerImg
+    if(counterTrainerImage==1){
+      trainer0.setIcon(trainerImg)
+      document.getElementById('trainer-pic').src = trainerImg
+    }
+    else if (counterTrainerImage==2) {
+      trainer1.setIcon(trainerImg)
+      document.getElementById('trainer-pic').src = trainerImg
+    }
+    else if (counterTrainerImage==3) {
+      trainer2.setIcon(trainerImg)
+      document.getElementById('trainer-pic').src = trainerImg
+    }
+    else{
+      trainer3.setIcon(trainerImg)
+      document.getElementById('trainer-pic').src = trainerImg
+    }
     console.log(counterTrainerImage);
     if(counterTrainerImage ==  4){
       trainerIcon.style.display = 'none'
