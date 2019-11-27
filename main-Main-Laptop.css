@@ -1,0 +1,80 @@
+body {
+  background: black;
+  overflow: hidden;
+  margin: 0;
+  font-family: "Alata";
+}
+
+#pokeball-background {
+  align-items: center;
+}
+#pokeball-background #white-layer {
+  height: 100%;
+  width: 80%;
+  background-color: white;
+  z-index: 0;
+  position: absolute;
+  right: 56%;
+  animation: slide1 1.5s forwards;
+  z-index: 0;
+}
+#pokeball-background #red-layer {
+  height: 100%;
+  width: 80%;
+  background-color: red;
+  z-index: 0;
+  position: absolute;
+  left: 56%;
+  animation: slide2 1.5s forwards;
+  z-index: 0;
+}
+#pokeball-background #btn-layer {
+  border-radius: 50%;
+  border: 30px solid black;
+  background: white;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 33%;
+  right: 41.5%;
+  opacity: 0;
+  animation: appear 1s forwards;
+  animation-delay: 2s;
+  z-index: 1;
+}
+
+#trainer-icons {
+  display: none;
+}
+#trainer-icons .icons {
+  display: none;
+}
+
+@keyframes slide1 {
+  from {
+    right: 100%;
+    opacity: 0;
+  }
+  to {
+    right: 56%;
+    opacity: 1;
+  }
+}
+@keyframes slide2 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 56%;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

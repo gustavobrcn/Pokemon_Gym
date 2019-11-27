@@ -8,6 +8,7 @@ body {
 #pokeball-background {
   align-items: center;
 
+
 #white-layer {
   height: 100%;
   width: 80%;
@@ -16,6 +17,7 @@ body {
   position: absolute;
   right: 56%;
   animation: slide1 1.5s forwards;
+  z-index: 0;
 }
 #red-layer {
   height: 100%;
@@ -25,23 +27,113 @@ body {
   position: absolute;
   left: 56%;
   animation: slide2 1.5s forwards;
+  z-index: 0;
 }
 
 #btn-layer {
   border-radius: 50%;
   border: 30px solid black;
   background: white;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   position: absolute;
-  top:33%;
-  right:41.5%;
+  top:35%;
+  right:42%;
   opacity: 0;
   animation: appear 1s forwards;
   animation-delay: 2s;
+  z-index: 1
+  }
 }
 
+#welcome {
+  height: 150px;
+  width: 600px;
+  background-color: #21c7ed;
+  border: 10px solid #2c97b0;
+  border-radius: 25px;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  opacity: 0;
+  animation: appear 1s forwards, 
+             disappear 1s forwards;
+  animation-delay: 3s, 5s;
+  display: none;
+  h3{
+    color:white;
+    font-size: 32pt;
+    text-align: center;
+  }
 }
+
+#trainer-icons {
+  display: none;
+
+  .icons {
+    display: none;
+  }
+}
+
+.trainer-grid {
+  position: absolute;
+  padding: 35px;
+  top: 15%;
+  display: grid;
+  grid-template: repeat(1, 10px) / repeat(4, 25%);
+  grid-column-gap: 20px;
+  justify-items: center;
+
+.trainer-display {
+  z-index: 3;
+  
+  background-color: #21c7ed;
+  border-radius: 25px ;
+  border: 10px solid #2c97b0;
+  height: 600px;
+  width: 430px;
+
+  .trainers {
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    border: 10px solid #2c97b0;
+    cursor: pointer;
+    position: absolute;
+    top: -25%;
+    }
+  }
+
+  #pokemon-form {
+    margin-top:65px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+
+    #pokemon-input {
+      border-radius: 25px;
+      height: 20px;
+      width: 210px;
+      border: 5px solid white;
+      font-size: 10pt;
+    }
+
+    #pokemon-btn {
+      background-color: #2c97b0;
+      border-radius: 25px;
+      border: 5px solid #2c97b0;
+      height: 30px;
+      width: 120px;
+      font-family: 'Alata';
+      font-size: 10pt;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
 // ----------Animations----------
 @keyframes slide1 {
   from {right:100%; opacity: 0; }
@@ -56,4 +148,9 @@ body {
 @keyframes appear {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+@keyframes disappear {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
