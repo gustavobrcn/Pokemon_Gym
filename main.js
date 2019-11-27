@@ -94,53 +94,71 @@ for (let i = 1 ; i < 9; i++) {
   })
 }
 let count = 0
+counterPokemon1 = 1
+counterPokemon2 = 1
+counterPokemon3 = 1
+counterPokemon4 = 1
+
 displaytrainer1.addEventListener('submit', async (e) => {
   e.preventDefault()
   const pokemonName =  document.getElementById('pokemon-input1').value
-  const pokemon = new Pokemon(pokemonName)
-  await pokemon.init()
-  trainer0.addPokemon(pokemon)
-  const image = document.createElement('img')
-  image.src = pokemon.image
-  image.dataset.index = count++
-  pokemonTeam1.appendChild(image)
+  if(counterPokemon1 < 4){
+    const pokemon = new Pokemon(pokemonName)
+    await pokemon.init()
+
+    trainer0.addPokemon(pokemon)
+    const image = document.createElement('img')
+    image.src = pokemon.image
+    image.dataset.index = count++
+    pokemonTeam1.appendChild(image)
+    counterPokemon1++
+  }
 
 })
 displaytrainer2.addEventListener('submit', async (e) => {
   e.preventDefault()
   const pokemonName =  document.getElementById('pokemon-input2').value
-  const pokemon = new Pokemon(pokemonName)
-  await pokemon.init()
-  trainer2.addPokemon(pokemon)
-  const image = document.createElement('img')
-  image.src = pokemon.image
-  image.dataset.index = count++
-  pokemonTeam2.appendChild(image)
+  if(counterPokemon2 < 4){
+    const pokemon = new Pokemon(pokemonName)
+    await pokemon.init()
+    trainer2.addPokemon(pokemon)
+    const image = document.createElement('img')
+    image.src = pokemon.image
+    image.dataset.index = count++
+    pokemonTeam2.appendChild(image)
+    counterPokemon2++
+  }
 
 })
 displaytrainer3.addEventListener('submit', async (e) => {
   e.preventDefault()
   const pokemonName =  document.getElementById('pokemon-input3').value
-  const pokemon = new Pokemon(pokemonName)
-  await pokemon.init()
-  trainer2.addPokemon(pokemon)
-  const image = document.createElement('img')
-  image.src = pokemon.image
-  image.dataset.index = count++
-  pokemonTeam3.appendChild(image)
+  if(counterPokemon3 < 4){
+    const pokemon = new Pokemon(pokemonName)
+    await pokemon.init()
+    trainer2.addPokemon(pokemon)
+    const image = document.createElement('img')
+    image.src = pokemon.image
+    image.dataset.index = count++
+    pokemonTeam3.appendChild(image)
+    counterPokemon3++
+  }
 
 })
 
 displaytrainer4.addEventListener('submit', async (e) => {
   e.preventDefault()
   const pokemonName =  document.getElementById('pokemon-input4').value
-  const pokemon = new Pokemon(pokemonName)
-  await pokemon.init()
-  trainer3.addPokemon(pokemon)
-  const image = document.createElement('img')
-  image.src = pokemon.image
-  image.dataset.index = count++
-  pokemonTeam4.appendChild(image)
+  if(counterPokemon4 < 4){
+    const pokemon = new Pokemon(pokemonName)
+    await pokemon.init()
+    trainer3.addPokemon(pokemon)
+    const image = document.createElement('img')
+    image.src = pokemon.image
+    image.dataset.index = count++
+    pokemonTeam4.appendChild(image)
+    counterPokemon4++
+  }
 
 })
 
