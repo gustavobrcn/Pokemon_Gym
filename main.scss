@@ -57,7 +57,7 @@ body {
   top: 40%;
   left: 35%;
   opacity: 0;
-  animation: appear 1s forwards, 
+  animation: appear 1s forwards,
              disappear 1s forwards;
   animation-delay: 3s, 5s;
   //display: none;
@@ -83,14 +83,14 @@ body {
   opacity: 0;
   animation: appear 1s forwards;
   animation-delay: 5.5s;
-  
-  
+
+
 
   .form-content {
     padding: 20px;
     padding-left: 40px;
     margin-top: 25px;
-    
+
   }
 
   #trainer-input {
@@ -151,11 +151,11 @@ body {
     border: 10px solid white;
     cursor: pointer;
   }
-  
+
 }
 
 .trainer-grid {
-  display: none;
+  // display: none;
   position: absolute;
   padding: 35px;
   top: 15%;
@@ -170,8 +170,9 @@ body {
   border-radius: 25px ;
   border: 10px solid #2c97b0;
   height: 600px;
-  width: 430px;
-  
+  width: 410px;
+  // display: none;
+
 
   #pokemon-team {
     display: grid;

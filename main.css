@@ -140,7 +140,6 @@ body {
 }
 
 .trainer-grid {
-  display: none;
   position: absolute;
   padding: 35px;
   top: 15%;
@@ -155,7 +154,7 @@ body {
   border-radius: 25px;
   border: 10px solid #2c97b0;
   height: 600px;
-  width: 430px;
+  width: 410px;
 }
 .trainer-grid .trainer-display #pokemon-team {
   display: grid;
