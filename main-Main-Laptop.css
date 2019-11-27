@@ -32,11 +32,11 @@ body {
   border-radius: 50%;
   border: 30px solid black;
   background: white;
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   position: absolute;
-  top: 35%;
-  right: 42%;
+  top: 33%;
+  right: 41.5%;
   opacity: 0;
   animation: appear 1s forwards;
   animation-delay: 2s;
