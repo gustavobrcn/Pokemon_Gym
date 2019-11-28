@@ -140,7 +140,6 @@ body {
 }
 
 .trainer-grid {
-  position: absolute;
   padding: 35px;
   top: 15%;
   display: grid;
@@ -149,6 +148,8 @@ body {
   justify-items: center;
 }
 .trainer-grid .trainer-display {
+  position: relative;
+  top: 200px;
   z-index: 3;
   background-color: #21c7ed;
   border-radius: 25px;
@@ -156,23 +157,29 @@ body {
   height: 600px;
   width: 410px;
 }
-.trainer-grid .trainer-display #pokemon-team {
+.trainer-grid .trainer-display .pokemon-team {
   display: grid;
   grid-template: repeat(3, 32%)/repeat(2, 49%);
   justify-items: center;
 }
-.trainer-grid .trainer-display #pokemon-team img {
+.trainer-grid .trainer-display .pokemon-team img {
   height: 160px;
   cursor: pointer;
   margin-right: 80px;
 }
-.trainer-grid .trainer-display #pokemon-team .pokemon-stats {
+.trainer-grid .trainer-display .pokemon-team .pokemon-stats {
   display: grid;
-  grid-template: repeat(2, 30%)/repeat(2, 60%);
+  grid-template: repeat(2, 30%)/repeat(2, 50%);
   font-size: 8pt;
-  position: absolute;
-  top: 260%;
-  right: 1%;
+  position: relative;
+  top: -150%;
+  right: -55%;
+  color: white;
+  border: 5px solid #2c97b0;
+  border-radius: 25px;
+  padding: 5px;
+  height: 75px;
+  width: 250px;
 }
 .trainer-grid .trainer-display .trainers {
   height: 100px;
@@ -181,7 +188,8 @@ body {
   border: 10px solid #2c97b0;
   cursor: pointer;
   position: absolute;
-  top: -25%;
+  top: -15%;
+  right: 85%;
 }
 .trainer-grid #pokemon-form {
   margin-top: 65px;

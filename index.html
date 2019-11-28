@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Alata|Lato|Poppins|Rubik|Ubuntu&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/pokeball_icon.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alata|Lato|Poppins|Rubik|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/pokeball_icon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
       <input id='trainer-input' type="text" name="trainer-name" placeholder="Trainer Name">
       <input id='trainer-btn' type="submit" name="create-trainer" value="Create Trainer">
     </div>
-   </form>
+  </form>
 
   <div id="trainer-icons">
     <p>Please select a trainer icon</p>
@@ -39,7 +39,7 @@
       <img src="images/pokemon_trainers/trainer_icons6.jpg" id='trainer6' class='trainers'>
       <img src="images/pokemon_trainers/trainer_icons7.jpg" id='trainer7' class='trainers'>
       <img src="images/pokemon_trainers/trainer_icons8.jpg" id='trainer8' class='trainers'>
-    </div>   
+    </div>
   </div>
 
   <div class='trainer-grid'>
@@ -47,109 +47,100 @@
     <div class='trainer-display' id="display-trainer1">
       <h3 id='trainer-name'></h3>
       <img src="images/pokemon_trainers/trainer_icons1.jpg" id='trainer-pic' class='trainers'>
-       <form id="pokemon-form">
+      <form id="pokemon-form">
         <div class="pokemon-form-content">
-          <input id='pokemon-input' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
+          <input id='pokemon-input' id='pokemon-input1' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
           <input id='pokemon-btn'type="submit" name="add-pokemon" value="Add Pokemon">
         </div>
       </form>
-      
-      <div id="display-pokemon">
-          <img class='pokemon-info' src="" alt="">
-            <div class="pokemon-stats">
-              <h3 class="pokemon-info"></h3>
-              <h3 class='pokemon-info'></h3>
-              <h3 class="pokemon-info"></h3>
-              <h3 class="pokemon-info"></h3>
-            </div>
-        </div>
 
-      <div id="pokemon-team">
-                </div>
+
+      <div class='pokemon-team' id="pokemon-team1">
+        <div id="display-pokemon">
+          <img class='pokemon-info' src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png" alt="">
+          <div class="pokemon-stats">
+            <h3 class="pokemon-info">Name: meowth</h3>
+            <h3 class='pokemon-info'>Def: 35</h3>
+            <h3 class="pokemon-info">HP: 40</h3>
+            <h3 class="pokemon-info">Abilities: unnerve, technician</h3>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class='trainer-display' id="display-trainer2">
       <h3 id='trainer-name'></h3>
       <img src="images/pokemon_trainers/trainer_icons1.jpg" id='trainer-pic' class='trainers'>
-        <form id="pokemon-form">
-          <div class="pokemon-form-content">
-            <input id='pokemon-input' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
-            <input id='pokemon-btn'type="submit" name="add-pokemon" value="Add Pokemon">
-           </div>
-        </form>
+      <form id="pokemon-form">
+        <div class="pokemon-form-content">
+          <input id='pokemon-input' id='pokemon-input2' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
+          <input id='pokemon-btn'type="submit" name="add-pokemon" value="Add Pokemon">
+        </div>
+      </form>
 
+      <div class='pokemon-team' id="pokemon-team2">
         <div id="display-pokemon">
-            <img class='pokemon-info' src="" alt="">
-              <div class="pokemon-stats">
-                <h3 class="pokemon-info"></h3>
-                <h3 class='pokemon-info'></h3>
-                <h3 class="pokemon-info"></h3>
-                <h3 class="pokemon-info"></h3>
-              </div>
-          </div>
-
-         <div id="pokemon-team">
-         </div>
-      </div>
-
-              <div class='trainer-display' id="display-trainer3">
-                        <h3 id='trainer-name'></h3>
-                        <img src="images/pokemon_trainers/trainer_icons1.jpg" id='trainer-pic' class='trainers'>
-                        <form id="pokemon-form">
-                          <div class="pokemon-form-content">
-                          <input id='pokemon-input' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
-                          <input id='pokemon-btn'type="submit" name="add-pokemon" value="Add Pokemon">
-                        </div>
-                        </form>
-
-                        <div id="display-pokemon">
-                            <img class='pokemon-info' src="" alt="">
-                              <div class="pokemon-stats">
-                                <h3 class="pokemon-info"></h3>
-                                <h3 class='pokemon-info'></h3>
-                                <h3 class="pokemon-info"></h3>
-                                <h3 class="pokemon-info"></h3>
-                              </div>
-                          </div>
-
-                        <div id="pokemon-team">
-                        </div>
-                      </div>
-
-                  <div class='trainer-display' id="display-trainer4">
-                            <h3 id='trainer-name'></h3>
-                            <img src="images/pokemon_trainers/trainer_icons1.jpg" id='trainer-pic' class='trainers'>
-                            <form id="pokemon-form">
-                              <div class="pokemon-form-content">
-                              <input id='pokemon-input' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
-                              <input id='pokemon-btn'type="submit" name="add-pokemon" value="Add Pokemon">
-                            </div>
-                            </form>
-
-                            
-
-                            <div id="pokemon-team">
-                                <div id="display-pokemon">
-                                    <img class='pokemon-info' src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/256.png" alt="">
-                                      <div class="pokemon-stats">
-                                        <h3 class="pokemon-info">Name: Combusikin</h3>
-                                        <h3 class='pokemon-info'>Def: 60</h3>
-                                        <h3 class="pokemon-info">HP: 60</h3>
-                                        <h3 class="pokemon-info">Abilities: speed-boost, blaze</h3>
-                                      </div>
-                                  </div>
-                            </div>
-                          </div>
-                        </div>
-      <div id="display-pokemon">
-        <img class='pokemon-info' src="" alt="">
+          <img class='pokemon-info' src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png" alt="">
           <div class="pokemon-stats">
-            <h3 class="pokemon-info"></h3>
-            <h3 class='pokemon-info'></h3>
-            <h3 class="pokemon-info"></h3>
-            <h3 class="pokemon-info"></h3>
+            <h3 class="pokemon-info">Name: meowth</h3>
+            <h3 class='pokemon-info'>Def: 35</h3>
+            <h3 class="pokemon-info">HP: 40</h3>
+            <h3 class="pokemon-info">Abilities: unnerve, technician</h3>
           </div>
+        </div>
       </div>
+    </div>
 
+    <div class='trainer-display' id="display-trainer3">
+      <h3 id='trainer-name'></h3>
+      <img src="images/pokemon_trainers/trainer_icons1.jpg" id='trainer-pic' class='trainers'>
+      <form id="pokemon-form">
+        <div class="pokemon-form-content">
+          <input id='pokemon-input' id='pokemon-input3' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
+          <input id='pokemon-btn'type="submit" name="add-pokemon" value="Add Pokemon">
+        </div>
+      </form>
+
+
+      <div class='pokemon-team' id="pokemon-team3">
+        <div id="display-pokemon">
+          <img class='pokemon-info' src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png" alt="">
+          <div class="pokemon-stats">
+            <h3 class="pokemon-info">Name: meowth</h3>
+            <h3 class='pokemon-info'>Def: 35</h3>
+            <h3 class="pokemon-info">HP: 40</h3>
+            <h3 class="pokemon-info">Abilities: unnerve, technician</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='trainer-display' id="display-trainer4">
+      <h3 id='trainer-name'></h3>
+      <img src="images/pokemon_trainers/trainer_icons1.jpg" id='trainer-pic' class='trainers'>
+      <form id="pokemon-form">
+        <div class="pokemon-form-content">
+          <input id='pokemon-input' id='pokemon-input4' type="text" name="pokemon-name" placeholder="Pokemon Name or ID">
+          <input id='pokemon-btn'type="submit" name="add-pokemon" value="Add Pokemon">
+        </div>
+      </form>
+
+      <div class='pokemon-team' id="pokemon-team4">
+        <div id="display-pokemon">
+          <img class='pokemon-info' src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png" alt="">
+          <div class="pokemon-stats">
+            <h3 class="pokemon-info">Name: meowth</h3>
+            <h3 class='pokemon-info'>Def: 35</h3>
+            <h3 class="pokemon-info">HP: 40</h3>
+            <h3 class="pokemon-info">Abilities: unnerve, technician</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="main.js" charset="utf-8"></script>
+<script src="pokemon.js" charset="utf-8"></script>
+<script src="trainer.js" charset="utf-8"></script>
 </body>
 </html>
