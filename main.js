@@ -6,10 +6,10 @@ const pokemonForm = document.getElementById('pokemon-form')
 const trainerIcon = document.getElementById('trainer-icons')
 const selectedTrainer = document.getElementsByClassName('trainers')
 const displayTeam = document.getElementById('display-team')
-const pokemonTeam1 = document.getElementById('pokemon-team1')
-const pokemonTeam2 = document.getElementById('pokemon-team2')
-const pokemonTeam3 = document.getElementById('pokemon-team3')
-const pokemonTeam4 = document.getElementById('pokemon-team4')
+const pokemonTeam1 = document.getElementById('pokemon-stats1')
+const pokemonTeam2 = document.getElementById('pokemon-stats2')
+const pokemonTeam3 = document.getElementById('pokemon-stats3')
+const pokemonTeam4 = document.getElementById('pokemon-stats4')
 
 
 const displaytrainer1 = document.getElementById('display-trainer1')
@@ -23,6 +23,10 @@ const displaytrainer4 = document.getElementById('display-trainer4')
  trainer2 = new Trainer("Aseel2")
  trainer3 = new Trainer("Aseel3")
 
+displaytrainer1.style.display = 'none'
+displaytrainer2.style.display = 'none'
+displaytrainer3.style.display = 'none'
+displaytrainer4.style.display = 'none'
 // startBtn.addEventListener('click', () => {
 //   trainerForm.style.display = 'block'
 // })
@@ -38,19 +42,23 @@ trainerForm.addEventListener('submit', (e) => {
   if (countSubmit == 2) {
     trainer0 = new Trainer(name)
     console.log(trainer0.name);
+    document.getElementById('trainer-name1').innerHTML = `Trainer ${trainer0.name}'s Team`
 
   }else if (countSubmit == 3){
     trainer1 = new Trainer(name)
     console.log(trainer1.name);
+    document.getElementById('trainer-name2').innerHTML = `Trainer ${trainer1.name}'s Team`
   }
   else if (countSubmit == 4){
     trainer2 = new Trainer(name)
     console.log(trainer2.name);
+    document.getElementById('trainer-name3').innerHTML = `Trainer ${trainer2.name}'s Team`
 
   }
   else if ( countSubmit == 5){
     trainer3 = new Trainer(name)
     console.log(trainer3.name);
+    document.getElementById('trainer-name4').innerHTML = `Trainer ${trainer3.name}'s Team`
   }
 
   if(countSubmit == 5)
@@ -60,54 +68,62 @@ trainerForm.addEventListener('submit', (e) => {
 
   }
 
-  document.getElementById('trainer-name').innerHTML = `Trainer ${name}'s Team`
 })
 counterTrainerImage=1
 for (let i = 1 ; i < 9; i++) {
   document.getElementById(`trainer${i}`).addEventListener('click', () => {
 
     trainerImg = document.getElementById(`trainer${i}`).src
+
+
+console.log(trainerImg + " " + counterTrainerImage );
     if(counterTrainerImage==1){
+      document.getElementById('trainer-pic1').src = trainerImg
       trainer0.setIcon(trainerImg)
-      document.getElementById('trainer-pic').src = trainerImg
     }
     else if (counterTrainerImage==2) {
-      trainer1.setIcon(trainerImg)
-      document.getElementById('trainer-pic').src = trainerImg
+      document.getElementById('trainer-pic2').src = trainerImg
+      trainer1.icon = trainerImg
     }
     else if (counterTrainerImage==3) {
+      document.getElementById('trainer-pic3').src = trainerImg
       trainer2.setIcon(trainerImg)
-      document.getElementById('trainer-pic').src = trainerImg
     }
     else{
+      document.getElementById('trainer-pic4').src = trainerImg
       trainer3.setIcon(trainerImg)
-      document.getElementById('trainer-pic').src = trainerImg
     }
     console.log(counterTrainerImage);
     if(counterTrainerImage ==  4){
+      displaytrainer1.style.display = 'block'
+      displaytrainer2.style.display = 'block'
+      displaytrainer3.style.display = 'block'
+      displaytrainer4.style.display = 'block'
       trainerIcon.style.display = 'none'
       displayTeam.style.display = 'block'
-      startBtn.style.display = 'none'
+      // startBtn.style.display = 'none'
 
     }
     counterTrainerImage++
   })
 }
 let count = 0
-counterPokemon1 = 1
-counterPokemon2 = 1
-counterPokemon3 = 1
-counterPokemon4 = 1
+counterPokemon1 = 0
+counterPokemon2 = 0
+counterPokemon3 = 0
+counterPokemon4 = 0
 
 displaytrainer1.addEventListener('submit', async (e) => {
   e.preventDefault()
   const pokemonName =  document.getElementById('pokemon-input1').value
-  if(counterPokemon1 < 4){
+  if(counterPokemon1 < 3){
     const pokemon = new Pokemon(pokemonName)
     await pokemon.init()
 
     trainer0.addPokemon(pokemon)
     const image = document.createElement('img')
+    image.classList.add  = `trainer1${counterPokemon4}`
+    image.id = counterPokemon1
     image.src = pokemon.image
     image.dataset.index = count++
     pokemonTeam1.appendChild(image)
@@ -118,12 +134,14 @@ displaytrainer1.addEventListener('submit', async (e) => {
 displaytrainer2.addEventListener('submit', async (e) => {
   e.preventDefault()
   const pokemonName =  document.getElementById('pokemon-input2').value
-  if(counterPokemon2 < 4){
+  if(counterPokemon2 < 3){
     const pokemon = new Pokemon(pokemonName)
     await pokemon.init()
-    trainer2.addPokemon(pokemon)
+    trainer1.addPokemon(pokemon)
     const image = document.createElement('img')
     image.src = pokemon.image
+    image.classList.add  = `trainer2${counterPokemon4}`
+    image.id = counterPokemon2
     image.dataset.index = count++
     pokemonTeam2.appendChild(image)
     counterPokemon2++
@@ -133,12 +151,14 @@ displaytrainer2.addEventListener('submit', async (e) => {
 displaytrainer3.addEventListener('submit', async (e) => {
   e.preventDefault()
   const pokemonName =  document.getElementById('pokemon-input3').value
-  if(counterPokemon3 < 4){
+  if(counterPokemon3 < 3){
     const pokemon = new Pokemon(pokemonName)
     await pokemon.init()
     trainer2.addPokemon(pokemon)
     const image = document.createElement('img')
     image.src = pokemon.image
+    image.classList.add  = `trainer3${counterPokemon4}`
+    image.id = counterPokemon3
     image.dataset.index = count++
     pokemonTeam3.appendChild(image)
     counterPokemon3++
@@ -148,12 +168,16 @@ displaytrainer3.addEventListener('submit', async (e) => {
 
 displaytrainer4.addEventListener('submit', async (e) => {
   e.preventDefault()
+
   const pokemonName =  document.getElementById('pokemon-input4').value
   if(counterPokemon4 < 4){
     const pokemon = new Pokemon(pokemonName)
     await pokemon.init()
     trainer3.addPokemon(pokemon)
     const image = document.createElement('img')
+    image.classList.add  = `trainer4${counterPokemon4}`
+    image.id = counterPokemon4
+
     image.src = pokemon.image
     image.dataset.index = count++
     pokemonTeam4.appendChild(image)
@@ -165,11 +189,11 @@ displaytrainer4.addEventListener('submit', async (e) => {
 pokemonTeam1.addEventListener('click', (e) => { //current target is the pokemon team - what the listener is attached to
   console.log(e.target);                       //target is the thing that caused the event (img)
   console.log(e.currentTarget);
-  if (e.target != e.currentTarget) {
-    const pokemonIndex = e.target.dataset.index
-    let pokemon = trainer0.all()[pokemonIndex]
-    pokemonStats = document.getElementsByClassName('pokemon-info')
-    pokemonStats[0].src = pokemon.image
+    if (e.target.id < 3) {
+    const pokemonIndex = e.target.id
+    var pokemon = trainer0.all()[pokemonIndex]
+    pokemonStats = document.getElementsByClassName('pokemon-info1')
+    // pokemonStats[0].src = pokemon.image
     pokemonStats[1].innerHTML = `Name: ${pokemon.name}`
     pokemonStats[2].innerHTML = `Def: ${pokemon.def}`
     pokemonStats[3].innerHTML = `Abilities: ${pokemon.abilities[0]}, ${pokemon.abilities[1]}`
@@ -180,11 +204,12 @@ pokemonTeam1.addEventListener('click', (e) => { //current target is the pokemon 
 pokemonTeam2.addEventListener('click', (e) => { //current target is the pokemon team - what the listener is attached to
   console.log(e.target);                       //target is the thing that caused the event (img)
   console.log(e.currentTarget);
-  if (e.target != e.currentTarget) {
-    const pokemonIndex = e.target.dataset.index
-    let pokemon = trainer1.all()[pokemonIndex]
-    pokemonStats = document.getElementsByClassName('pokemon-info')
-    pokemonStats[0].src = pokemon.image
+  if (e.target.id < 3)  {
+    const pokemonIndex = e.target.id
+    console.log(pokemonIndex);
+    var pokemon = trainer1.all()[pokemonIndex]
+    pokemonStats = document.getElementsByClassName('pokemon-info2')
+    // pokemonStats[0].src = pokemon.image
     pokemonStats[1].innerHTML = `Name: ${pokemon.name}`
     pokemonStats[2].innerHTML = `Def: ${pokemon.def}`
     pokemonStats[3].innerHTML = `Abilities: ${pokemon.abilities[0]}, ${pokemon.abilities[1]}`
@@ -193,13 +218,13 @@ pokemonTeam2.addEventListener('click', (e) => { //current target is the pokemon 
   e.stopPropagation() //
 })
 pokemonTeam3.addEventListener('click', (e) => { //current target is the pokemon team - what the listener is attached to
-  console.log(e.target);                       //target is the thing that caused the event (img)
+  console.log(e.target.dataset.id);                       //target is the thing that caused the event (img)
   console.log(e.currentTarget);
-  if (e.target != e.currentTarget) {
-    const pokemonIndex = e.target.dataset.index
-    let pokemon = trainer2.all()[pokemonIndex]
-    pokemonStats = document.getElementsByClassName('pokemon-info')
-    pokemonStats[0].src = pokemon.image
+  if (e.target.id < 3)  {
+    const pokemonIndex = e.target.id
+    var pokemon = trainer2.all()[pokemonIndex]
+    pokemonStats = document.getElementsByClassName('pokemon-info3')
+    // pokemonStats[0].src = pokemon.image
     pokemonStats[1].innerHTML = `Name: ${pokemon.name}`
     pokemonStats[2].innerHTML = `Def: ${pokemon.def}`
     pokemonStats[3].innerHTML = `Abilities: ${pokemon.abilities[0]}, ${pokemon.abilities[1]}`
@@ -208,13 +233,16 @@ pokemonTeam3.addEventListener('click', (e) => { //current target is the pokemon 
   e.stopPropagation() //
 })
 pokemonTeam4.addEventListener('click', (e) => { //current target is the pokemon team - what the listener is attached to
-  console.log(e.target);                       //target is the thing that caused the event (img)
-  console.log(e.currentTarget);
-  if (e.target != e.currentTarget) {
+console.log(e.target.id);
+console.log(e.target.dataset.index);                       //target is the thing that caused the event (img)
+
+  if (e.target.id < 3) {
     const pokemonIndex = e.target.dataset.index
-    let pokemon = trainer3.all()[pokemonIndex]
-    pokemonStats = document.getElementsByClassName('pokemon-info')
-    pokemonStats[0].src = pokemon.image
+
+    var pokemon = trainer3.all()[e.target.id]
+    pokemonStats = document.getElementsByClassName('pokemon-info4')
+
+    // pokemonStats[0].src = pokemon.image
     pokemonStats[1].innerHTML = `Name: ${pokemon.name}`
     pokemonStats[2].innerHTML = `Def: ${pokemon.def}`
     pokemonStats[3].innerHTML = `Abilities: ${pokemon.abilities[0]}, ${pokemon.abilities[1]}`
