@@ -144,7 +144,7 @@ body {
   top: 15%;
   display: grid;
   grid-template: repeat(1, 10px)/repeat(4, 25%);
-  grid-column-gap: 20px;
+  grid-column-gap: 15px;
   justify-items: center;
 }
 .trainer-grid .trainer-display {
@@ -172,7 +172,7 @@ body {
   grid-template: repeat(2, 30%)/repeat(2, 50%);
   font-size: 8pt;
   position: relative;
-  top: -150%;
+  top: 50%;
   right: -55%;
   color: white;
   border: 5px solid #2c97b0;
