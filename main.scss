@@ -5,6 +5,7 @@ body {
   font-family: 'Alata';
 }
 
+
 #pokeball-background {
   align-items: center;
 
@@ -154,17 +155,21 @@ body {
 
 }
 
+
 .trainer-grid {
   // display: none;
-  position: absolute;
+  // position: absolute;
   padding: 35px;
   top: 15%;
   display: grid;
   grid-template: repeat(1, 10px) / repeat(4, 25%);
-  grid-column-gap: 20px;
+  grid-column-gap: 15px;
   justify-items: center;
 
+
 .trainer-display {
+  position: relative;
+  top: 200px;
   z-index: 3;
   background-color: #21c7ed;
   border-radius: 25px ;
@@ -174,7 +179,7 @@ body {
   // display: none;
 
 
-  #pokemon-team {
+  .pokemon-team {
     display: grid;
     grid-template: repeat(3, 32%) / repeat(2, 49%);
     justify-items: center;
@@ -187,12 +192,19 @@ body {
 
     .pokemon-stats {
       display: grid;
-      grid-template: repeat(2, 30%) / repeat(2, 60%);
+      grid-template: repeat(2, 30%)/repeat(2, 50%);
       font-size: 8pt;
-      position: absolute;
-      top: 260%;
-      right: 1%;
+      position: relative;
+      top: 50%;
+      right: -55%;
+      color: white;
+      border: 5px solid #2c97b0;
+      border-radius: 25px;
+      padding: 5px;
+      height: 75px;
+      width: 250px
     }
+
   }
 
   .trainers {
@@ -202,7 +214,8 @@ body {
     border: 10px solid #2c97b0;
     cursor: pointer;
     position: absolute;
-    top: -25%;
+    top: -15%;
+    right:85%
     }
   }
 
