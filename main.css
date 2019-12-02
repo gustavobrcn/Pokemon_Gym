@@ -157,6 +157,27 @@ body {
   height: 600px;
   width: 410px;
 }
+
+#trainer-name1{
+color: white;
+text-align: center;
+font-size: 20pt;
+}
+#trainer-name2{
+  color: white;
+  text-align: center;
+  font-size: 20pt;
+}
+#trainer-name3{
+  color: white;
+  text-align: center;
+  font-size: 20pt;
+}
+#trainer-name4{
+  color: white;
+  text-align: center;
+  font-size: 20pt;
+}
 .trainer-grid .trainer-display .pokemon-team {
   display: grid;
   grid-template: repeat(3, 32%)/repeat(2, 49%);
