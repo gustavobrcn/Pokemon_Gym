@@ -80,14 +80,17 @@ for (let i = 1 ; i < 9; i++) {
 
 console.log(trainerImg + " " + counterTrainerImage );
     if(counterTrainerImage==1){
+      document.getElementById('icon-name').innerHTML="Please select the 2nd trainers icon"
       document.getElementById('trainer-pic1').src = trainerImg
       trainer0.setIcon(trainerImg)
     }
     else if (counterTrainerImage==2) {
+      document.getElementById('icon-name').innerHTML="Please select the 3rd trainers icon"
       document.getElementById('trainer-pic2').src = trainerImg
       trainer1.icon = trainerImg
     }
     else if (counterTrainerImage==3) {
+      document.getElementById('icon-name').innerHTML="Please select the 4rth trainers icon"
       document.getElementById('trainer-pic3').src = trainerImg
       trainer2.setIcon(trainerImg)
     }
