@@ -40,16 +40,18 @@ trainerForm.addEventListener('submit', (e) => {
 
   name = document.getElementById('trainer-input').value
   if (countSubmit == 2) {
+    document.getElementById('trainer-text').innerHTML="Please enter the second trainers name"
     trainer0 = new Trainer(name)
     console.log(trainer0.name);
     document.getElementById('trainer-name1').innerHTML = `Trainer ${trainer0.name}'s Team`
-
   }else if (countSubmit == 3){
+    document.getElementById('trainer-text').innerHTML="Please enter the third trainers name"
     trainer1 = new Trainer(name)
     console.log(trainer1.name);
     document.getElementById('trainer-name2').innerHTML = `Trainer ${trainer1.name}'s Team`
   }
   else if (countSubmit == 4){
+    document.getElementById('trainer-text').innerHTML="Please enter the fourth trainers name"
     trainer2 = new Trainer(name)
     console.log(trainer2.name);
     document.getElementById('trainer-name3').innerHTML = `Trainer ${trainer2.name}'s Team`
