@@ -155,7 +155,6 @@ body {
 
 }
 
-
 .trainer-grid {
   // display: none;
   // position: absolute;
@@ -178,7 +177,26 @@ body {
   width: 410px;
   // display: none;
 
-
+  #trainer-name1{
+  color: white;
+  text-align: center;
+  font-size: 20pt;
+  }
+  #trainer-name2{
+    color: white;
+    text-align: center;
+    font-size: 20pt;
+  }
+  #trainer-name3{
+    color: white;
+    text-align: center;
+    font-size: 20pt;
+  }
+  #trainer-name4{
+    color: white;
+    text-align: center;
+    font-size: 20pt;
+  }
   .pokemon-team {
     display: grid;
     grid-template: repeat(3, 32%) / repeat(2, 49%);
@@ -196,13 +214,17 @@ body {
       font-size: 8pt;
       position: relative;
       top: 50%;
-      right: -55%;
+      right: -40%;
       color: white;
       border: 5px solid #2c97b0;
       border-radius: 25px;
       padding: 5px;
       height: 75px;
-      width: 250px
+      width: 250px;
+
+      .pokemon-info1 {
+
+      }
     }
 
   }
